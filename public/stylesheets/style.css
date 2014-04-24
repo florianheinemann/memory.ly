@@ -286,8 +286,8 @@ p{font-family: 'Lato', 'sans-serif'; padding: 0px; margin: 0px;}
 
 
 .gridd {
- -moz-column-width: 277px;
- -webkit-column-width: 277px;
+ -moz-column-width: 300px;
+ -webkit-column-width: 300px;
  -moz-column-gap: 1em;
  -webkit-column-gap:1em; 
   
