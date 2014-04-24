@@ -15,7 +15,7 @@ var storageSchema = new Schema({
 });
 
 storageSchema.statics.listAllItemsForMemory = function(memory, lastPull, callback) {
-	if(!lastPull) {
+	if(!lastPull || lastPull.trim() === 'second') {
 		lastPull = '';
 	} else {
 		lastPull = '?ts=' + lastPull;
