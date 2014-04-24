@@ -280,3 +280,26 @@ p{font-family: 'Lato', 'sans-serif'; padding: 0px; margin: 0px;}
 	margin-left: auto;
 	margin-right: auto;
 }
+
+
+*, *:before, *:after {box-sizing:  border-box !important;}
+
+
+.gridd {
+ -moz-column-width: 277px;
+ -webkit-column-width: 277px;
+ -moz-column-gap: 1em;
+ -webkit-column-gap:1em; 
+  
+}
+
+.item {
+ display: inline-block;
+ padding:  .25rem;
+ width:  100%; 
+}
+
+.well {
+ position:relative;
+ display: block;
+}
