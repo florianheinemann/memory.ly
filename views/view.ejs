@@ -27,7 +27,7 @@
 
 <script> 
 	var DZloaded = false;
-	var lastPull = '<%= pullTimestamp %>';
+	var lastPull = '';
 
 	DZ.init({
 		appId  : '1363411',
@@ -99,10 +99,12 @@
 
 	function refreshData() {
 		$.get( "/<%= memory %>/data?lastPull=" + lastPull.trim(), { }, function( resp ) {
-			lastPull = 'second';
-
-			qResp = $(resp);
+			qResp = $(resp).children('div');
 			for (var i = qResp.length - 1; i >= 0; i--) {
+				var date = $(qResp[i]).children('.timestamp').attr('data');
+				if(date > lastPull) {
+					lastPull = date;
+				}
 				$(qResp[i]).hide().prependTo('#item-list').fadeIn(1000);
 			};
 
