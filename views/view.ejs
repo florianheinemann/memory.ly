@@ -111,6 +111,7 @@
 			pullDeezer();
 		})
 		.always(function() {
+			$('#loading').hide();
 	    	setTimeout(function() { refreshData() }, 2000);
 		});
 	}
