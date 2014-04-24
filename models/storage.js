@@ -15,7 +15,13 @@ var storageSchema = new Schema({
 });
 
 storageSchema.statics.listAllItemsForMemory = function(memory, lastPull, callback) {
-	restClient.get(config.http.rest_url + "/list/" + memory,  function(data, response) {
+	if(!lastPull) {
+		lastPull = '';
+	} else {
+		lastPull = '?ts=' + lastPull;
+	}
+	console.log(config.http.rest_url + "/list/" + memory + lastPull);
+	restClient.get(config.http.rest_url + "/list/" + memory + lastPull,  function(data, response) {
 		data = data.storage;
 		for (var i = data.length - 1; i >= 0; i--) {
 			if(data[i].type === 'deezer') {

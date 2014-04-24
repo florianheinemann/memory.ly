@@ -2,6 +2,7 @@
 <% for(var i=0; i<items.length; i++) {%>
 	<% if(items[i].type === 'picture') { %>
 		<div class="five columns content">
+		<span class='timestamp' data='<%= items[i].date %>' />
 			<a href="<%= items[i].url %>" data-lightbox="picset">
 				<img src="<%= items[i].data %>">
 			</a>
@@ -12,9 +13,9 @@
 			</div>
 		</div>
 	<% } %>
-
 	<% if(items[i].type.indexOf('deezer') > -1) { %>
 		<div class="five columns content">
+		<span class='timestamp' data='<%= items[i].date %>' />
 		<div style="position:relative">
 			<img src='/images/play.png' class='playbutton' >
 			<img src="/images/albumart.png" class='<%= items[i].type %> deezer-item deezer-wait' data='<%= items[i].data %>'>
