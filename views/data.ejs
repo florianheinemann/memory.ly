@@ -1,7 +1,7 @@
 <div>
 <% for(var i=0; i<items.length; i++) {%>
 	<% if(items[i].type === 'picture') { %>
-		<div class="five columns content">
+		<div class="five columns content wow flipInX">
 			<a href="<%= items[i].data %>" data-lightbox="picset">
 				<img src="<%= items[i].data %>">
 			</a>
@@ -14,7 +14,7 @@
 	<% } %>
 
 	<% if(items[i].type.indexOf('deezer') > -1) { %>
-		<div class="five columns content">
+		<div class="five columns content wow flipInX">
 		<div style="position:relative">
 			<img src='/images/play.png' class='playbutton' >
 			<img src="/images/albumart.png" class='<%= items[i].type %> deezer-item deezer-wait' data='<%= items[i].data %>'>
