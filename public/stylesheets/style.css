@@ -265,6 +265,8 @@ p{font-family: 'Lato', 'sans-serif'; padding: 0px; margin: 0px;}
 
 #view{
 	background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url(../images/view.jpg);
+	background-position: center center;
+	background-size: cover;
 	height: 350px;
     width: 100%;
     text-align: left;
